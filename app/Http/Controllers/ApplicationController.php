@@ -17,7 +17,7 @@ class ApplicationController extends Controller
         $today = Carbon::today()->toDateString(); // Получаем текущую дату в формате "Y-m-d"
         $recordCreatedToday = Application::where('user_id', auth()->user()->id)->whereDate('created_at', $today)->count();
 
-        $applications = Application::orderBy('created_at','desc')->simplePaginate(2);
+        $applications = Application::where('user_id', auth()->user()->id)->orderBy('created_at','desc')->simplePaginate(10);
         return view('pages.applications.index', compact('applications','recordCreatedToday'));
     }
 
@@ -173,16 +173,6 @@ class ApplicationController extends Controller
                 }
             }
         }
-        // dd($reportData);
-       
-        
-        // $expIds = [];
-        // foreach($expeditors as $exp){
-        //     $expIds[] = $exp->id;
-        // } 
-        
-        // dd($expeditors);
-        // return view('pages.applications.table');
         return view('pages.applications.table', compact('reportData','expeditors','products'));
     }
 }

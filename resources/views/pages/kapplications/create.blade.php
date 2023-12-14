@@ -31,6 +31,7 @@
                             </div>
                             <div class="keyValues-wrapper">
                                 @foreach($products as $key => $product)
+                                    @if(isset($totalproducts[$product->name]))
                                     <div class="keyValues-item">
                                         <div class="keyValues-name">
                                             <input class="input input-name" id="input_name" type="text" value="{{$product->name}}" disabled>
@@ -39,9 +40,10 @@
                                             <input class="input input-count1" id="input_count1" type="number" value="{{$totalproducts[$product->name]}}" placeholder>
                                         </div>
                                         <div class="keyValues-value">
-                                            <input class="input input-count2" id="input_count2" type="number" disabled>
+                                            <input class="input input-count2" id="input_count2" type="number" value="0" disabled>
                                         </div>
                                     </div>
+                                    @endif
                                 @endforeach
                             </div>
                         </div>

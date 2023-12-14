@@ -7,9 +7,9 @@
       <section class="tables">
         <div class="title">
           <h2>Заявки</h2>
-          @if($recordCreatedToday==0)
+          <!-- @if($recordCreatedToday==0) -->
             <a class="btn btn-main create-user" href="/applications/create">Создать заявку</a>
-            @endif
+            <!-- @endif -->
         </div>
         <div class="tables-wrapper">
           <table class="tables-item">
@@ -29,7 +29,7 @@
                 <td><a class="tables-link" href="/applications/{{$application->id}}">{{$application->created_at->format('d.m.Y')}}</a></td>
                 <td>
                   <div class="btns-group">
-                    @if($application->status != 'big_exp')
+                    <!-- @if($application->status != 'big_exp') -->
                     <a class="btn-edit" href="/applications/{{$application->id}}/edit">
                       <svg class="inline-block"
                         xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -50,7 +50,7 @@
                           d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
                       </svg>
                     </a>
-                    @endif
+                    <!-- @endif -->
                   </div>
                 </td>
               </tr>

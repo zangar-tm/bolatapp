@@ -25,7 +25,6 @@ class ProductController extends Controller
     // Сохранить новый продукт
     public function store(Request $request)
     {
-        // dd($request);
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             // 'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',

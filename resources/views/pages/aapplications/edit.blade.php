@@ -30,7 +30,7 @@
                             </div>
                             <div class="keyValues-wrapper">
                             @foreach($application->data as $app)
-                            @if($app['input_count2']!=''&& $app['input_count2']!=0)
+                            @if($app['input_count1']!=''&& $app['input_count1']!=0)
                                 <div class="keyValues-item">
                                     <div class="keyValues-name">
                                         <input class="input" id="input_name" type="text" value="{{$app['input_name']}}" disabled>
@@ -39,10 +39,10 @@
                                         <input class="input" id="input_count1" disabled type="text" value="{{$app['input_count1']}}">
                                     </div>
                                     <div class="keyValues-value">
-                                        <input class="input" id="input_count2" type="text" value="{{$app['input_count2']??$app['input_count1']}}">
+                                        <input class="input" id="input_count2" type="number" value="{{$app['input_count2']??$app['input_count1']}}">
                                     </div>
                                     <div class="keyValues-count">
-                                        <input class="input" id="input_count3" type="text" value="{{$app['input_count2']}}" autofocus>
+                                        <input class="input" id="input_count3" type="number" value="{{$app['input_count2']}}" autofocus>
                                     </div>
                                 </div>
                                 @endif
@@ -68,7 +68,7 @@
                         <p>От кухни</p>
                     </div>
                     <div class="view-item-value">
-                        <div class="keyValues keyValues-three keyValues-noBtn">
+                        <div class="keyValues keyValues-four keyValues-noBtn">
                             <input class="status-input" type="hidden" name="status" value="small_exp">
                             <input class="status-input" type="hidden" name="table" value="products">
                             <input class="status-input" type="hidden" name="isSelect" value="true">

@@ -25,6 +25,9 @@ use App\Http\Controllers\PurchaseController;
 */
 // Route::get('/users/create', [UserController::class, 'create']);
 // Route::post('/users', [UserController::class, 'store']);
+Route::get('/', function(){
+    return redirect('/dashboard');
+});
 Route::middleware(['auth.check'])->group(function () {
     Route::resource('products', ProductController::class);
     Route::resource('applications', ApplicationController::class);
@@ -47,6 +50,7 @@ Route::middleware(['auth.check'])->group(function () {
     Route::get('/aapplications/{id}', [ApplicationController::class, 'aa_show']);
     Route::get('/applications-table', [ApplicationController::class, 'table'])->name('applications.table');
     Route::get('/ksummaries-table', [KSummaryController::class, 'table'])->name('ksummaries.table');
+    Route::get('/ingredients-table', [IngredientController::class, 'table'])->name('ingredients.table');
     Route::get('/dashboard', function(){
         return view('dashboard');
     });

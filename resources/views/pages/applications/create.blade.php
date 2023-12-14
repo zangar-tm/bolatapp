@@ -33,10 +33,6 @@
                                 @foreach($products as $product)
                                 <div class="keyValues-item">
                                     <div class="keyValues-name">
-                                        <!-- <select class="input select-main" id="input_name" name="role">
-                                            <option value="" disabled selected>Выберите вариант</option>
-                                            <option value="{{$product->name}}">{{$product->name}}</option>
-                                        </select> -->
                                         <input class="input input-name" id="input_name" type="text" value="{{$product->name}}" disabled>
                                     </div>
                                     <div class="keyValues-key">

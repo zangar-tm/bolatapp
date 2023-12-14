@@ -38,6 +38,11 @@
             <div class="aside-item-icon"><img src="/icons/invoice.svg" alt=""></div>Накладные
         </a>
         @endif
+        @if(in_array(auth()->user()->role,['админ','кухня']))
+        <a class="aside-item @if(Route::currentRouteName() === 'chiefs.index') or request()->is('chiefs/*')) active @endif" href="/chiefs">
+            <div class="aside-item-icon"><img src="/icons/chief.svg" alt=""></div>Повара
+        </a>
+        @endif
         @if(in_array(auth()->user()->role,['админ','экспедитор','старший экспедитор']))
         <a class="aside-item @if(Route::currentRouteName() === 'applications.index') or request()->is('applications/*')) active @endif" href="/applications">
             <div class="aside-item-icon"><img src="/icons/forwarder.svg" alt=""></div>Заявки к ст.экспедитору
@@ -48,19 +53,9 @@
             <div class="aside-item-icon"><img src="/icons/forwarder.svg" alt=""></div>Заявки от экспедиторов
         </a>
         @endif
-        @if(in_array(auth()->user()->role,['админ','старший экспедитор']))
-        <a class="aside-item @if(Route::currentRouteName() === 'applications.table') active @endif" href="/applications-table">
-            <div class="aside-item-icon"><img src="/icons/forwarder.svg" alt=""></div>Таблица экспедиторов
-        </a>
-        @endif
-        @if(in_array(auth()->user()->role,['админ','старший экспедитор','кухня']))
+        @if(in_array(auth()->user()->role,['админ','старший экспедитор','кухня','закупщик']))
         <a class="aside-item @if(Route::currentRouteName() === 'kapplications.index') or request()->is('kapplications/*')) active @endif" href="/kapplications">
             <div class="aside-item-icon"><img src="/icons/kitchen.svg" alt=""></div>Заявки в кухню
-        </a>
-        @endif
-        @if(in_array(auth()->user()->role,['админ','кухня']))
-        <a class="aside-item @if(Route::currentRouteName() === 'chiefs.index') or request()->is('chiefs/*')) active @endif" href="/chiefs">
-            <div class="aside-item-icon"><img src="/icons/chief.svg" alt=""></div>Повара
         </a>
         @endif
         @if(in_array(auth()->user()->role,['админ','кухня']))
@@ -68,14 +63,24 @@
             <div class="aside-item-icon"><img src="/icons/report.svg" alt=""></div>Отчеты кухни
         </a>
         @endif
+        @if(in_array(auth()->user()->role,['админ','закупщик','кухня']))
+        <a class="aside-item @if(Route::currentRouteName() === 'purchases.index') or request()->is('purchases/*')) active @endif" href="/purchases">
+            <div class="aside-item-icon"><img src="/icons/cart.svg" alt=""></div>Закуп
+        </a>
+        @endif
         @if(in_array(auth()->user()->role,['админ','кухня']))
         <a class="aside-item @if(Route::currentRouteName() === 'ksummaries.table') active @endif" href="/ksummaries-table">
             <div class="aside-item-icon"><img src="/icons/report.svg" alt=""></div>Таблица кухни
         </a>
         @endif
-        @if(in_array(auth()->user()->role,['админ','закуп','кухня']))
-        <a class="aside-item @if(Route::currentRouteName() === 'purchases.index') or request()->is('purchases/*')) active @endif" href="/purchases">
-            <div class="aside-item-icon"><img src="/icons/cart.svg" alt=""></div>Закуп
+        @if(in_array(auth()->user()->role,['админ','старший экспедитор']))
+        <a class="aside-item @if(Route::currentRouteName() === 'applications.table') active @endif" href="/applications-table">
+            <div class="aside-item-icon"><img src="/icons/forwarder.svg" alt=""></div>Таблица экспедиторов
+        </a>
+        @endif
+        @if(in_array(auth()->user()->role,['админ','закупщик','кухня']))
+        <a class="aside-item @if(Route::currentRouteName() === 'ingredients.table')) active @endif" href="/ingredients-table">
+            <div class="aside-item-icon"><img src="/icons/cart.svg" alt=""></div>Таблица ингредиентов
         </a>
         @endif
         @if(in_array(auth()->user()->role,['админ']))

@@ -31,8 +31,6 @@
                         <div class="keyValues keyValues-two">
                             <input class="hidden-input" type="hidden" name="ingredients">
                             <input class="status-input" type="hidden" name="table" value="ingredients">
-                            <input class="status-input" type="hidden" name="isSelect" value="true">
-                            <input class="status-input" type="hidden" name="status" value="small_exp">
                             <div class="keyValues-title">
                                 <div class="keyValues-name keyValues-title-item"><span>НАЗВАНИЕ</span></div>
                                 <div class="keyValues-key keyValues-title-item"><span>ЗНАЧЕНИЕ</span></div>

@@ -35,7 +35,10 @@
                             @foreach($product->ingredients as $ingred)
                             <div class="keyValues-item">
                                 <div class="keyValues-name">
-                                    <input class="input" id="input_name" type="text" value="{{$ingred['input_name']}}" placeholder disabled>
+                                    @php
+                                        $type = App\Models\Ingredient::where('name',$ingred['input_name'])->first()->type;
+                                    @endphp
+                                    <input class="input" id="input_name" type="text" value="{{$ingred['input_name']}} {{$type}}" placeholder disabled>
                                 </div>
                                 <div class="keyValues-key">
                                     <input class="input" id="input_count1" type="text" value="{{ $ingred['input_count1']}}" placeholder disabled>

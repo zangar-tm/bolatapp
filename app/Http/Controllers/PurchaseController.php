@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Remain;
 use Illuminate\Http\Request;
 use App\Models\Ingredient;
 use App\Models\Purchase;
@@ -37,7 +38,14 @@ class PurchaseController extends Controller
                 $ingprice->ingredient_id = $ingr->id;
                 $ingprice->price = $d['input_count1'];
                 $ingprice->save();
-            }
+            }   
+            if($d['input_count2']!=''){
+                $remain = new Remain();
+                $remain->ingredient_id = $ingr->id;
+                $remain->operation = 'plus';
+                $remain->number = $d['input_count2'];
+                $remain->save();
+            }   
         }
         return redirect('/purchases')->with('success', 'Отчет успешно создан.');
     }

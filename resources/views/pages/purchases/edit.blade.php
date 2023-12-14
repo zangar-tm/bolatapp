@@ -18,8 +18,8 @@
                         <p>Параметры</p>
                     </div>
                     <div class="view-item-value">
-                        <div class="keyValues keyValues-four  keyValues-noBtn">
-                            <input class="status-input" type="hidden" name="status" value="small_exp">
+                        <div class="keyValues keyValues-four">
+                            <input class="status-input" type="hidden" name="status" value="purchase">                                 
                             <input class="status-input" type="hidden" name="table" value="ingredients">
                             <input class="hidden-input" type="hidden" name="data">
                             <div class="keyValues-title">
@@ -42,6 +42,10 @@
                                     </div>
                                     <div class="keyValues-count">
                                         <input class="input" id="input_count3" type="number" value="{{$pur['input_count3']}}">
+                                    </div>
+                                    <div class="keyValues-btn-delete">
+                                        <button class="keyValues-delete" type="button"><img src="/icons/delete-red.svg"
+                                                alt></button>
                                     </div>
                                 </div>
                                 @endforeach
