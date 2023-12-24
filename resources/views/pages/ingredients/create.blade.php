@@ -32,8 +32,8 @@
                         <select class="btn select-item" name="type">
                             <option value="" disabled selected>Выберите тип</option>
                             <option value="шт">шт</option>
-                            <option value="кг">кг</option>
-                            <option value="л">л</option>
+                            <option value="гр">гр</option>
+                            <option value="мл">мл</option>
                             <option value="пачка">пачка</option>
                         </select>
                         @error('type')

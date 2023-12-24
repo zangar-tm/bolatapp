@@ -20,8 +20,9 @@
                         <input class="hidden-input" type="hidden" name="data">
                         <div class="keyValues-title">
                             <div class="keyValues-name keyValues-title-item"><span>Ингредиент</span></div>
-                            <div class="keyValues-key keyValues-title-item"><span>Стоимость</span></div>
+                            <div class="keyValues-key keyValues-title-item"><span>Стоимость за единицу</span></div>
                             <div class="keyValues-value keyValues-title-item"><span>Куплено</span></div>
+                            <div class="keyValues-key keyValues-title-item"><span>Общая стоимость</span></div>
                             <div class="keyValues-count keyValues-title-item"><span>Принято</span></div>
                         </div>
                         <div class="keyValues-wrapper">

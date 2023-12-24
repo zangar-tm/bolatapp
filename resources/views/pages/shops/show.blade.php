@@ -61,6 +61,14 @@
                     <p>{{$shop->type}}</p>
                 </div>
             </div>
+            <div class="view-item">
+                <div class="view-item-key">
+                    <p>Бонус</p>
+                </div>
+                <div class="view-item-value">
+                    <p>{{$shop->bonus}}</p>
+                </div>
+            </div>
         </div>
     </section>
 </div>

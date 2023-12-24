@@ -18,27 +18,27 @@
             <div class="aside-item-icon"><img src="/icons/users.svg" alt=""></div>Сотрудники
         </a>
         @endif
-        @if(in_array(auth()->user()->role,['админ','экспедитор','старший экспедитор']))
+        @if(in_array(auth()->user()->role,['админ','менеджер','экспедитор','старший экспедитор']))
         <a class="aside-item @if(Route::currentRouteName() === 'shops.index' or request()->is('shops/*')) active @endif" href="/shops">
             <div class="aside-item-icon"><img src="/icons/store.svg" alt=""></div>Магазины
         </a>
         @endif
-        @if(in_array(auth()->user()->role,['админ','кухня']))
+        @if(in_array(auth()->user()->role,['админ','менеджер']))
         <a class="aside-item @if(Route::currentRouteName() === 'products.index' or request()->is('products/*')) active @endif" href="/products">
             <div class="aside-item-icon"><img src="/icons/product.svg" alt=""></div>Продукты
         </a>
         @endif
-        @if(in_array(auth()->user()->role,['админ','кухня']))
+        @if(in_array(auth()->user()->role,['админ','менеджер']))
         <a class="aside-item @if(Route::currentRouteName() === 'ingredients.index') or request()->is('ingredients/*')) active @endif" href="/ingredients">
             <div class="aside-item-icon"><img src="/icons/ingredients.svg" alt=""></div>Ингредиенты
         </a>
         @endif
-        @if(in_array(auth()->user()->role,['админ','экспедитор','старший экспедитор']))
+        @if(in_array(auth()->user()->role,['админ','менеджер','экспедитор','старший экспедитор']))
         <a class="aside-item @if(Route::currentRouteName() === 'invoices.index')  or request()->is('invoices/*')) active @endif" href="/invoices">
             <div class="aside-item-icon"><img src="/icons/invoice.svg" alt=""></div>Накладные
         </a>
         @endif
-        @if(in_array(auth()->user()->role,['админ','кухня']))
+        @if(in_array(auth()->user()->role,['админ','менеджер']))
         <a class="aside-item @if(Route::currentRouteName() === 'chiefs.index') or request()->is('chiefs/*')) active @endif" href="/chiefs">
             <div class="aside-item-icon"><img src="/icons/chief.svg" alt=""></div>Повара
         </a>
@@ -83,7 +83,7 @@
             <div class="aside-item-icon"><img src="/icons/cart.svg" alt=""></div>Таблица ингредиентов
         </a>
         @endif
-        @if(in_array(auth()->user()->role,['админ']))
+        @if(in_array(auth()->user()->role,['админ','менеджер']))
         <a class="aside-item @if(Route::currentRouteName() === 'setting.edit') active @endif" href="/company/edit">
             <div class="aside-item-icon"><img src="/icons/settings.svg" alt=""></div>Наcтройки
         </a>

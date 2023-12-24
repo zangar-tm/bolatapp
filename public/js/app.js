@@ -3198,6 +3198,7 @@
                                     }))
                                 }));
                                 if (n.isMobile) return void
+
                                 function () {
                                     var e = n.config.enableTime ? n.config.noCalendar ? "time" : "datetime-local" : "date";
                                     n.mobileInput = z("input", n.input.className + " flatpickr-mobile"), n.mobileInput.tabIndex = 1, n.mobileInput.type = e, n.mobileInput.disabled = n.input.disabled, n.mobileInput.required = n.input.required, n.mobileInput.placeholder = n.input.placeholder, n.mobileFormatStr = "datetime-local" === e ? "Y-m-d\\TH:i:S" : "date" === e ? "Y-m-d" : "H:i:S", n.selectedDates.length > 0 && (n.mobileInput.defaultValue = n.mobileInput.value = n.formatDate(n.selectedDates[0], n.mobileFormatStr));
@@ -3744,7 +3745,7 @@
                                 return ye().wrap((function (t) {
                                     for (;;) switch (t.prev = t.next) {
                                         case 0:
-                                            return t.prev = 0, t.next = 3, _e.get("https://9568-37-151-57-210.ngrok-free.app/api/products");
+                                            return t.prev = 0, t.next = 3, _e.get("https://work.tazafood.kz//api/products");
                                         case 3:
                                             n = t.sent, r = n.data.products, e.products = r, t.next = 11;
                                             break;
@@ -3766,7 +3767,7 @@
                                 return ye().wrap((function (t) {
                                     for (;;) switch (t.prev = t.next) {
                                         case 0:
-                                            return t.prev = 0, t.next = 3, _e.get("https://9568-37-151-57-210.ngrok-free.app/api/ingredients");
+                                            return t.prev = 0, t.next = 3, _e.get("https://work.tazafood.kz//api/ingredients");
                                         case 3:
                                             n = t.sent, r = n.data.ingredients, e.ingredients = r, t.next = 11;
                                             break;
@@ -3788,7 +3789,7 @@
                                 return ye().wrap((function (t) {
                                     for (;;) switch (t.prev = t.next) {
                                         case 0:
-                                            return t.prev = 0, t.next = 3, _e.get("https://9568-37-151-57-210.ngrok-free.app/api/chiefs");
+                                            return t.prev = 0, t.next = 3, _e.get("https://work.tazafood.kz//api/chiefs");
                                         case 3:
                                             n = t.sent, r = n.data.chiefs, e.chiefs = r, t.next = 11;
                                             break;
@@ -3810,7 +3811,7 @@
                                 return ye().wrap((function (t) {
                                     for (;;) switch (t.prev = t.next) {
                                         case 0:
-                                            return t.prev = 0, n = document.querySelector('input[name="user_id"'), r = n.value, t.next = 5, _e.get("https://9568-37-151-57-210.ngrok-free.app/api/shops?user_id=".concat(r));
+                                            return t.prev = 0, n = document.querySelector('input[name="user_id"'), r = n.value, t.next = 5, _e.get("https://work.tazafood.kz//api/shops?user_id=".concat(r));
                                         case 5:
                                             i = t.sent, a = i.data.shops, e.shops = a, t.next = 13;
                                             break;

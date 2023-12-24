@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('boss_phone')->nullable();
             $table->string('type')->nullable();
+            $table->string('bonus')->nullable();
             $table->timestamps();
         });
     }

@@ -31,6 +31,7 @@
                         <select class="btn select-item" name="role">
                             <option value="" disabled selected>Выберите роль</option>
                             <option value="админ">админ</option>
+                            <option value="менеджер">менеджер</option>
                             <option value="кухня">кухня</option>
                             <option value="экспедитор">экспедитор</option>
                             <option value="старший экспедитор">старший экспедитор</option>

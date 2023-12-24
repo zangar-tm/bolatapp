@@ -18,7 +18,7 @@
                         <p>Параметры</p>
                     </div>
                     <div class="view-item-value">
-                        <div class="keyValues keyValues-four    ">
+                        <div class="keyValues keyValues-four">
                             <input class="status-input" type="hidden" name="status" value="purchase">
                             <input class="status-input" type="hidden" name="table" value="ingredients">
                             <input class="hidden-input" type="hidden" name="data">

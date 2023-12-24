@@ -27,14 +27,17 @@ class AuthController extends Controller
                 case 'админ':
                     return redirect()->intended('/users');
                     break;
+                case 'менеджер':
+                    return redirect()->intended('/products');
+                    break;    
                 case 'кухня':
                     return redirect()->intended('/kapplications');
                     break;
                 case 'экспедитор':
-                    return redirect()->intended('/applications');
+                    return redirect()->intended('/invoices');
                     break;
                 case 'старший экспедитор':
-                    return redirect()->intended('/applications');
+                    return redirect()->intended('/invoices');
                     break;
                 case 'закуп':
                     return redirect()->intended('/purchases');

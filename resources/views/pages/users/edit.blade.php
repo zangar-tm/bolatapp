@@ -32,6 +32,7 @@
                 <select class="btn select-item" name="role">
                     <option value="" disabled selected>Выберите вариант</option>
                     <option value="админ" @if($user->role=="админ") selected @endif>кухня</option>
+                    <option value="менеджер" @if($user->role=="менеджер") selected @endif>менеджер</option>
                     <option value="кухня" @if($user->role=="кухня") selected @endif>кухня</option>
                     <option value="экспедитор" @if($user->role=="экспедитор") selected @endif>экспедитор</option>
                     <option value="старший экспедитор" @if($user->role=="старший экспедитор") selected @endif>старший экспедитор</option>

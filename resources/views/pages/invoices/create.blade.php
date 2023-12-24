@@ -41,6 +41,7 @@
                             <option value="наличные">Наличные</option>
                             <option value="каспи переводом">Каспи переводом</option>
                             <option value="картой">Картой</option>
+                            <option value="долг">Долг</option>
                         </select>
                         @error('payment_type')
                             <div class="error-text">Выберите тип оплаты</div>

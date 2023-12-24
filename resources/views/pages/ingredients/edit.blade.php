@@ -33,8 +33,8 @@
                         <select class="btn select-item" name="type">
                             <option value="" disabled selected>Выберите тип</option>
                             <option value="шт" @if($ingredient->type=='шт') selected @endif>шт</option>
-                            <option value="кг" @if($ingredient->type=='кг') selected @endif>кг</option>
-                            <option value="л" @if($ingredient->type=='л') selected @endif>л</option>
+                            <option value="гр" @if($ingredient->type=='гр') selected @endif>гр</option>
+                            <option value="мл" @if($ingredient->type=='мл') selected @endif>мл</option>
                             <option value="пачка" @if($ingredient->type=='пачка') selected @endif>пачка</option>
                         </select>
                         @error('type')

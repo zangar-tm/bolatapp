@@ -31,6 +31,7 @@ class ShopController extends Controller
             'user_id' => 'required|integer',
             'type' => 'required|string',
             "boss_phone" => "nullable",
+            "bonus" => "nullable",
         ]);
 
         // Создание нового магазина
@@ -41,6 +42,7 @@ class ShopController extends Controller
         $shop->boss_phone = $validatedData['boss_phone'];
         $shop->user_id = $validatedData['user_id'];
         $shop->type = $validatedData['type'];
+        $shop->bonus = $validatedData['bonus'];
         $shop->save();
 
         return redirect('/shops')->with('success', 'Магазин успешно создан.');
@@ -68,7 +70,8 @@ class ShopController extends Controller
             'phone' => 'required|string|max:20',
             'user_id' => 'required|integer',
             'type' => 'required|string',
-            'boss_phone' => 'nullable'
+            'boss_phone' => 'nullable',
+            'bonus' => 'nullable'
         ]);
 
         // Обновление данных магазина
@@ -78,6 +81,7 @@ class ShopController extends Controller
         $shop->user_id = $validatedData['user_id'];
         $shop->boss_phone = $validatedData['boss_phone'];
         $shop->type = $validatedData['type'];
+        $shop->bonus = $validatedData['bonus'];
         $shop->save();
 
         return redirect('/shops')->with('success', 'Магазин успешно обновлен.');

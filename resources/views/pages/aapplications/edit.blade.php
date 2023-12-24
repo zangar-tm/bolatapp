@@ -7,7 +7,7 @@
     <section class="view edit tables">
     <a class="btn btn-text btn-icon" href="/aapplications"><img src="/icons/back.svg" alt>Назад</a>
         <div class="title">
-            <h2>Обновить заявку от: {{ $application->created_at->format('d.m.Y') }}</h2>
+            <h2>Обновить заявку от: {{ $application->created_at->format('d.m.Y') }} | Экспедитор: {{$application->user()->name}}</h2>
         </div>
         <form action="/aapplications/{{$application->id}}" method="POST">
             @csrf

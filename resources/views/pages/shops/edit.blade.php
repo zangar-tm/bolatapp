@@ -89,6 +89,22 @@
                         @enderror
                     </div>
                 </div>
+                <div class="view-item">
+                    <div class="view-item-key hide">
+                        <p>Бонус</p><span>*</span>
+                    </div>
+                    <div class="view-item-value">
+                        <select class="btn select-item" name="type">
+                            <option value="" disabled selected>Выберите ингредиент</option>
+                            <option value="10+1">10+1</option>
+                            <option value="15+1">15+1</option>
+                            <option value="20+1">20+1</option>
+                        </select>
+                        @error('bonus')
+                            <div class="error-text">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
             </div>
             <div class="view-btns">
                 <div class="btns-group">

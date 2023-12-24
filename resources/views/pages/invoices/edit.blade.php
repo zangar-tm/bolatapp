@@ -38,6 +38,7 @@
                             <option value="наличные" @if($invoice->payment_type=="наличные") selected @endif>Наличные</option>
                             <option value="каспи переводом" @if($invoice->payment_type=="каспи переводом") selected @endif>Каспи переводом</option>
                             <option value="картой" @if($invoice->payment_type=="картой") selected @endif>Картой</option>
+                            <option value="долг" @if($invoice->payment_type=="долг") selected @endif>Долг</option>
                         </select>
                         @error('payment_type')
                             <div class="error-text">Выберите тип оплаты</div>
